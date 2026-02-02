@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as v;
+
+.product-monoblock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem;
+}
+
+.product-gallery img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.btn-buy {
+  background: v.$negro;
+  color: v.$blanco;
+  padding: .8rem 2rem;
+  border: none;
+  margin-top: 1rem;
+}

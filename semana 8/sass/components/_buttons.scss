@@ -1,0 +1,16 @@
+.btn-main {
+  display: inline-block;
+  padding: 0.75rem 2.2rem;
+  border-radius: 40px;
+  background-color: #111;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-main:hover {
+  background-color: #f4b6c2;
+  color: #111;
+}

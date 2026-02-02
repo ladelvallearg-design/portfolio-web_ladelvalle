@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as v;
+
+/* -------------------------
+   SHOP: HERO
+-------------------------- */
+.shop-hero {
+  background-color: v.$rosa-suave;
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.shop-hero h1 {
+  font-size: 3rem;
+  margin-bottom: .5rem;
+  color: v.$negro;
+}
+
+.shop-hero p {
+  font-size: 1.2rem;
+  opacity: .8;
+}
+
+/* -------------------------
+   SHOP GRID
+-------------------------- */
+.shop-grid {
+  padding: 5rem 0;
+}
+
+/* Product card */
+.product-card {
+  background-color: v.$blanco;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
+
+  img {
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.12);
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  h3 {
+    margin-top: .8rem;
+    font-size: 1.25rem;
+    color: v.$negro;
+    margin-bottom: .4rem;
+  }
+
+  p {
+    font-size: .95rem;
+    color: v.$negro;
+    opacity: .75;
+    margin-bottom: .6rem;
+  }
+
+  span {
+    font-weight: 600;
+    color: v.$naranja;
+    font-size: 1.1rem;
+  }
+}

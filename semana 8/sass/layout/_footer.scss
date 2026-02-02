@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as v;
+
+.footer-main {
+  background: linear-gradient(135deg, v.$rosa, v.$naranja);
+  padding: 4rem 0;
+  margin-top: 5rem;
+  color: v.$negro;
+}
+
+.footer-social a {
+  font-size: 1.3rem;
+  margin: 0 .6rem;
+  color: v.$negro;
+
+  &:hover {
+    color: v.$blanco;
+  }
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: .4rem;
+  }
+
+  a {
+    color: v.$negro;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: .8rem;
+}

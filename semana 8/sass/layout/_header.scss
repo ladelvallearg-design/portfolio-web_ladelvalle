@@ -1,0 +1,94 @@
+@use '../abstracts/variables' as v;
+
+/* ===============================
+   HEADER GLOBAL
+================================ */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: v.$blanco;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* NAVBAR BASE */
+.main-header .navbar {
+  padding: 0.8rem 0;
+}
+
+.navbar-brand img {
+  max-height: 46px;
+}
+
+/* LINKS */
+.nav-link {
+  color: v.$negro;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: v.$rosa;
+  }
+}
+
+/* DESKTOP EXTRA */
+.header-extra {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .social {
+    color: v.$negro;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: v.$rosa;
+    }
+  }
+
+  .btn-header {
+    background-color: v.$naranja;
+    color: v.$blanco;
+    padding: 0.45rem 1.1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: v.$rosa;
+    }
+  }
+}
+
+/* MOBILE */
+.navbar-toggler {
+  border: none;
+  font-size: 1.4rem;
+}
+
+/* MENU MOBILE */
+.navbar-collapse {
+  background-color: v.$rosa-suave;
+  margin-top: 1rem;
+  padding: 1.5rem 0;
+}
+
+.navbar-nav {
+  gap: 1rem;
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-nav {
+    gap: 2rem;
+  }
+}

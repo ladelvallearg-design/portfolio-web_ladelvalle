@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+/* ================= CONTACTO ================= */
+
+.contact-page {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== CINTA ANIMADA ===== */
+.contact-tape {
+  overflow: hidden;
+  background: v.$naranja;
+  color: v.$blanco;
+  padding: 1rem 0;
+
+  .tape-track {
+    display: flex;
+    gap: 3rem;
+    white-space: nowrap;
+    animation: tapeMove 18s linear infinite;
+
+    span {
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .tape-track {
+    animation: none;
+  }
+}
+
+@keyframes tapeMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== HERO ===== */
+.contact-hero {
+  padding: 5rem 0;
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    opacity: 0.8;
+  }
+}
+
+/* ===== FORM ===== */
+.contact-form-section {
+  form {
+    .form-control {
+      border-radius: 0;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* ===== FAQ ===== */
+.contact-faq {
+  .accordion-button {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,135 @@
+@use '../abstracts/variables' as v;
+
+/* ===============================
+   CARRUSEL HERO HOME
+================================ */
+
+.home-hero-carousel .carousel-inner {
+  height: 75vh;
+  min-height: 350px;
+}
+
+.home-hero-carousel img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.home-hero-carousel .carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: v.$blanco;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.home-hero-carousel .carousel-caption h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.home-hero-carousel .carousel-caption p {
+  font-size: 1.2rem;
+}
+
+/* CONTROLES */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .home-hero-carousel .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+  .home-hero-carousel .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+.btn-main {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  background-color: #111;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f4b6c2; // rosa suave (ajustá a tu variable)
+    color: #111;
+  }
+}
+.home-services {
+  width: 100%;
+}
+
+.service-item {
+  padding: 4rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.service-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-content p {
+  max-width: 400px;
+  margin: 0;
+}
+
+.service-plus {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* COLORES */
+.service-branding {
+  background-color: #fc8afc;
+}
+
+.service-web {
+  background-color: #c0ff00;
+}
+
+.service-social {
+  background-color: #ff5500;
+  color: #fff;
+}
+
+.service-print {
+  background-color: #dc00d9;
+}
+
+/* HOVER */
+.service-item:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .service-plus {
+    display: none;
+  }
+}
+

@@ -1,0 +1,197 @@
+@use '../abstracts/variables' as v;
+
+/* HERO */
+.services-hero {
+  padding: 6rem 0;
+  background-color: #fff3ec;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards; /* Fade-in animation */
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.services-hero p {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+/* Sección de servicios */
+.service-detail {
+  padding: 5rem 0;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards; /* Fade-in animation */
+  animation-delay: 1.5s;
+}
+
+.service-detail h2 {
+  margin-bottom: 1rem;
+}
+
+.service-detail ul {
+  padding-left: 1rem;
+}
+
+.service-detail li {
+  margin-bottom: 0.5rem;
+}
+
+/* COLORES */
+.service-branding {
+  background-color: #d7ecff;
+}
+
+.service-web {
+  background-color: #f7c1e3;
+}
+
+.service-social {
+  background-color: #1f9d55;
+  color: #fff;
+}
+
+/* CTA */
+.services-cta {
+  padding: 5rem 0;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 2s;
+}
+
+/* ===================== SERVICIOS GRID ===================== */
+
+.services-grid-section {
+  background: v.$blanco;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: .6rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: v.$negro;
+    opacity: .8;
+  }
+}
+
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* CARD BASE */
+.service-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform .45s ease, box-shadow .45s ease;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, .07);
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards; /* Fade-in animation */
+  animation-delay: 2s;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, .15);
+
+    .card-content {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+  }
+
+  .card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.62);
+    transition: filter .45s ease;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.7rem;
+    z-index: 2;
+    color: v.$blanco;
+    transform: translateY(0px);
+    opacity: .92;
+    transition: all .45s ease;
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: .35rem;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: .8;
+    }
+  }
+}
+
+/* IMÁGENES DE FONDO (usá las tuyas o pon alguna que tengas) */
+.branding {
+  background-image: url("../img/service-branding.jpg");
+}
+
+.webdesign {
+  background-image: url("../img/service-web.jpg");
+}
+
+.socialmedia {
+  background-image: url("../img/service-social.jpg");
+}
+
+.packaging {
+  background-image: url("../img/service-print.jpg");
+}
+
+/* TRANSICIONES DEL FONDO */
+.service-card:hover .card-bg {
+  filter: brightness(0.55);
+}
+
+/* Animaciones clave (fadeIn) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de hover en botones */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: v.$rosa;
+  transform: scale(1.1);
+}
