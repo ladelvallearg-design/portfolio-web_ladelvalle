@@ -1,0 +1,6 @@
+@use '../abstracts/mixins' as m;
+
+.services-grid {
+  @include m.grid-auto(280px);
+  margin-top: 3rem;
+}

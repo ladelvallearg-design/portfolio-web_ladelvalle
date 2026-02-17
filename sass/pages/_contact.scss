@@ -4,7 +4,7 @@
 /* ================= CONTACTO ================= */
 
 .contact-page {
-  font-family: 'Montserrat', sans-serif;
+  font-family: v.$font-main;
 }
 
 /* ===== CINTA ANIMADA ===== */
@@ -13,6 +13,10 @@
   background: v.$naranja;
   color: v.$blanco;
   padding: 1rem 0;
+
+  span {
+    opacity: 0.9;
+  }
 
   .tape-track {
     display: flex;
@@ -28,7 +32,7 @@
   }
 }
 
-/* Respeta accesibilidad */
+/* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
   .tape-track {
     animation: none;
@@ -36,43 +40,45 @@
 }
 
 @keyframes tapeMove {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* ===== HERO ===== */
 .contact-hero {
   padding: 5rem 0;
 
-  h1 {
-    font-size: 2.8rem;
+  h1 { 
+    font-size: 2.8rem; 
   }
 
-  p {
-    opacity: 0.8;
+  p { 
+    opacity: 0.8; 
   }
 }
 
 /* ===== FORM ===== */
 .contact-form-section {
   form {
-    .form-control {
-      border-radius: 0;
+    .form-control { 
+      border-radius: 6px;
+      border: 1px solid #ddd;
+
+      &:focus {
+        border-color: v.$rosa;
+        box-shadow: 0 0 0 0.15rem rgba(254, 64, 207, 0.15);
+      }
     }
 
-    button {
-      margin-top: 1rem;
+    button { 
+      margin-top: 1rem; 
     }
   }
 }
 
 /* ===== FAQ ===== */
 .contact-faq {
-  .accordion-button {
-    font-weight: 500;
+  .accordion-button { 
+    font-weight: 500; 
   }
 }

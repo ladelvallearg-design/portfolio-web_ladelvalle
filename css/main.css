@@ -1,0 +1,728 @@
+@charset "UTF-8";
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+}
+
+img {
+  transition: transform 0.35s ease;
+}
+
+/* ===============================
+   HEADER GLOBAL
+================================ */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* NAVBAR BASE */
+.main-header .navbar {
+  padding: 0.8rem 0;
+}
+
+.navbar-brand img {
+  max-height: 46px;
+}
+
+/* LINKS */
+.nav-link {
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #ff88fe;
+}
+
+/* DESKTOP EXTRA */
+.header-extra {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-extra .social {
+  color: #000000;
+  font-size: 1.1rem;
+}
+.header-extra .social:hover {
+  color: #ff88fe;
+}
+.header-extra .btn-header {
+  background-color: #ff5500;
+  color: #ffffff;
+  padding: 0.45rem 1.1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.header-extra .btn-header:hover {
+  background-color: #ff88fe;
+}
+
+/* MOBILE */
+.navbar-toggler {
+  border: none;
+  font-size: 1.4rem;
+}
+
+/* MENU MOBILE */
+.navbar-collapse {
+  background-color: #fe40cf;
+  margin-top: 1rem;
+  padding: 1.5rem 0;
+}
+
+.navbar-nav {
+  gap: 1rem;
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar-nav {
+    gap: 2rem;
+  }
+}
+.footer-main {
+  background: linear-gradient(135deg, #ff88fe, #ff5500);
+  padding: 4rem 0;
+  margin-top: 5rem;
+  color: #000000;
+}
+
+.footer-social a {
+  font-size: 1.3rem;
+  margin: 0 0.6rem;
+  color: #000000;
+}
+.footer-social a:hover {
+  color: #ffffff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 0.4rem;
+}
+.footer-links a {
+  color: #000000;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+/* ================= HERO ================= */
+.home-hero-carousel .carousel-inner {
+  height: 75vh;
+  min-height: 350px;
+}
+
+.home-hero-carousel img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.home-hero-carousel .carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.home-hero-carousel .carousel-caption h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.home-hero-carousel .carousel-caption p {
+  font-size: 1.2rem;
+}
+
+/* CONTROLES */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .home-hero-carousel .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+  .home-hero-carousel .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+/* ================= BOTÓN ================= */
+.btn-main {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  background-color: #111;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-main:hover {
+  background-color: #f4b6c2;
+  color: #111;
+}
+
+/* ================= SERVICES ================= */
+.home-services {
+  width: 100%;
+}
+
+.service-item {
+  padding: 4rem 0;
+  transition: transform 0.35s ease, background-color 0.35s ease;
+}
+.service-item:hover {
+  transform: scale(0.985);
+  cursor: pointer;
+}
+
+.service-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+.service-content p {
+  max-width: 400px;
+  margin: 0;
+}
+
+.service-plus {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* Scoped colores HOME */
+.home-services .service-branding {
+  background-color: #fc8afc;
+}
+.home-services .service-web {
+  background-color: #c0ff00;
+}
+.home-services .service-social {
+  background-color: #ff5500;
+  color: #fff;
+}
+.home-services .service-print {
+  background-color: #dc00d9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .service-plus {
+    display: none;
+  }
+}
+/* ================= HERO ================= */
+.services-hero {
+  padding: 6rem 0;
+  background-color: #fff3ec;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.services-hero p {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+/* ================= SERVICIOS ================= */
+.service-detail {
+  padding: 5rem 0;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 1.5s;
+  border-radius: 12px;
+}
+
+/* Títulos y lista */
+.service-detail h2 {
+  margin-bottom: 1rem;
+}
+
+.service-detail ul {
+  padding-left: 1rem;
+}
+
+.service-detail li {
+  margin-bottom: 0.5rem;
+}
+
+/* Fondos y colores por servicio */
+.service-detail.service-branding {
+  background-color: #d7ecff !important;
+  color: #000;
+}
+
+.service-detail.service-web {
+  background-color: #f7c1e3 !important;
+  color: #000;
+}
+
+.service-detail.service-social {
+  background-color: #1f9d55 !important;
+  color: #fff !important;
+}
+
+/* Asegurar contraste en textos de social */
+.service-social h2,
+.service-social p,
+.service-social li {
+  color: #fff;
+}
+
+/* ================= CTA ================= */
+.services-cta {
+  padding: 5rem 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 2s;
+}
+.services-cta a.btn {
+  margin-top: 1rem;
+}
+
+/* ================= SERVICIOS GRID ================= */
+.services-grid-section {
+  background: #ffffff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.services-grid-section h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.services-grid-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================= CARDS ================= */
+.service-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 2s;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+.service-card:hover .card-content {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+.service-card .card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.62);
+  transition: filter 0.45s ease;
+}
+.service-card .card-content {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.7rem;
+  z-index: 2;
+  color: #ffffff;
+  transform: translateY(0px);
+  opacity: 0.92;
+  transition: all 0.45s ease;
+}
+.service-card .card-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.35rem;
+}
+.service-card .card-content p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Imágenes de fondo de cards */
+.branding {
+  background-image: url("../img/service-branding.jpg");
+}
+
+.webdesign {
+  background-image: url("../img/service-web.jpg");
+}
+
+.socialmedia {
+  background-image: url("../img/service-social.jpg");
+}
+
+.packaging {
+  background-image: url("../img/service-print.jpg");
+}
+
+.service-card:hover .card-bg {
+  filter: brightness(0.55);
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================= BOTONES ================= */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff88fe;
+  transform: scale(1.1);
+}
+
+/* ================= PORTFOLIO ================= */
+.portfolio-page {
+  padding: 5rem 0;
+}
+.portfolio-page h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* FLEX interno → requisito profe */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* DESKTOP */
+@media (min-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.shop-hero {
+  background-color: #fe40cf;
+  text-align: center;
+  padding: 6rem 0;
+}
+.shop-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.shop-hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.shop-grid {
+  padding: 5rem 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+.product-card img {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.35s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+.product-card:hover img {
+  transform: scale(1.05);
+}
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.product-card p {
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+.product-card span {
+  margin-top: auto;
+  font-weight: 600;
+  color: #ff5500;
+}
+
+.product-page {
+  padding: 4rem 0;
+}
+
+.product-monoblock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .product-monoblock {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-gallery img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product-info h1 {
+  font-size: 2rem;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.product-text {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.product-list {
+  padding-left: 1rem;
+}
+.product-list li {
+  margin-bottom: 0.3rem;
+}
+
+.btn-buy {
+  margin-top: 1rem;
+  background: #ff88fe;
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.btn-buy:hover {
+  background: #ff5500;
+  transform: translateY(-2px);
+}
+
+.back-shop {
+  margin-top: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+.back-shop:hover {
+  opacity: 1;
+}
+
+.related-products {
+  background: #f8f8f8;
+}
+.related-products h2 {
+  font-size: 1.6rem;
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.related-card img {
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+.related-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.related-card span {
+  font-weight: 600;
+  color: #ff5500;
+}
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= CONTACTO ================= */
+.contact-page {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===== CINTA ANIMADA ===== */
+.contact-tape {
+  overflow: hidden;
+  background: #ff5500;
+  color: #ffffff;
+  padding: 1rem 0;
+}
+.contact-tape span {
+  opacity: 0.9;
+}
+.contact-tape .tape-track {
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: tapeMove 18s linear infinite;
+}
+.contact-tape .tape-track span {
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  font-size: 0.9rem;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .tape-track {
+    animation: none;
+  }
+}
+@keyframes tapeMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* ===== HERO ===== */
+.contact-hero {
+  padding: 5rem 0;
+}
+.contact-hero h1 {
+  font-size: 2.8rem;
+}
+.contact-hero p {
+  opacity: 0.8;
+}
+
+/* ===== FORM ===== */
+.contact-form-section form .form-control {
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.contact-form-section form .form-control:focus {
+  border-color: #ff88fe;
+  box-shadow: 0 0 0 0.15rem rgba(254, 64, 207, 0.15);
+}
+.contact-form-section form button {
+  margin-top: 1rem;
+}
+
+/* ===== FAQ ===== */
+.contact-faq .accordion-button {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=main.css.map */

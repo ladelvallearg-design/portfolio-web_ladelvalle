@@ -1,26 +1,106 @@
 @use '../abstracts/variables' as v;
 
+.product-page {
+  padding: 4rem 0;
+}
+
 .product-monoblock {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  padding: 4rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.product-gallery img {
-  width: 100%;
-  margin-bottom: 1rem;
+.product-gallery {
+  img {
+    width: 100%;
+    border-radius: 14px;
+  }
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h1 { font-size: 2rem; }
 }
 
 .product-price {
   font-size: 1.4rem;
-  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.product-text {
+  opacity: .8;
+  line-height: 1.6;
+}
+
+.product-list {
+  padding-left: 1rem;
+
+  li { margin-bottom: .3rem; }
 }
 
 .btn-buy {
-  background: v.$negro;
-  color: v.$blanco;
-  padding: .8rem 2rem;
-  border: none;
   margin-top: 1rem;
+  background: v.$rosa;
+  color: v.$blanco;
+  padding: .9rem 2rem;
+  border: none;
+  border-radius: 30px;
+  transition: all .3s ease;
+
+  &:hover {
+    background: v.$naranja;
+    transform: translateY(-2px);
+  }
+}
+
+.back-shop {
+  margin-top: 1rem;
+  text-decoration: none;
+  font-size: .9rem;
+  opacity: .7;
+
+  &:hover { opacity: 1; }
+}
+
+.related-products {
+  background: #f8f8f8;
+
+  h2 { font-size: 1.6rem; }
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  color: v.$negro;
+  background: v.$blanco;
+  padding: 1rem;
+  border-radius: 16px;
+  transition: transform .3s ease, box-shadow .3s ease;
+
+  img {
+    border-radius: 12px;
+    margin-bottom: .8rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: .3rem;
+  }
+
+  span {
+    font-weight: 600;
+    color: v.$naranja;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+  }
 }

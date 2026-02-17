@@ -1,14 +1,11 @@
 @use '../abstracts/variables' as v;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: v.$font-main;
   background-color: v.$blanco;
   color: v.$negro;
   line-height: 1.6;
+}
+img {
+  transition: transform 0.35s ease;
 }

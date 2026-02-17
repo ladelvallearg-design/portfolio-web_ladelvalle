@@ -1,5 +1,7 @@
+@use 'variables' as v;
+
 %card-base {
-  background-color: $color-white;
+  background-color: v.$blanco;
   border: 1px solid #eee;
-  padding: $space-sm;
+  padding: 1rem;
 }

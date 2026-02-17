@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as m;
+
+.service-card {
+  @extend %card-base;
+
+  @include m.flex-center;
+  flex-direction: column;
+  text-align: center;
+}

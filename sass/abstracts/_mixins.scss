@@ -9,3 +9,8 @@
   align-items: center;
   justify-content: space-between;
 }
+@mixin grid-auto($min) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  gap: 2rem;
+}

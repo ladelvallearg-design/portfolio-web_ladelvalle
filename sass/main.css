@@ -12,6 +12,15 @@ body {
   line-height: 1.6;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+a:focus-visible {
+  outline: 2px solid #ff88fe;
+  outline-offset: 3px;
+}
+
 /* ===============================
    HEADER GLOBAL
 ================================ */
@@ -142,8 +151,7 @@ body {
 }
 
 .home-hero-carousel img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -644,4 +652,6 @@ body {
 /* ===== FAQ ===== */
 .contact-faq .accordion-button {
   font-weight: 500;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

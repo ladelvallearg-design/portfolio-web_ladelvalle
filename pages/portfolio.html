@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
   <title>Ladelvalle Studio – Portfolio</title>
+  <meta name="description" content="Portfolio de proyectos de branding, diseño web y contenido visual desarrollados por Ladelvalle Studio.">
+  <meta name="author" content="Ladelvalle Studio">
 
   <!-- Tipografía -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -16,7 +19,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -27,17 +30,23 @@
     <div class="container">
 
       <a class="navbar-brand mx-auto mx-lg-0" href="../index.html">
-        <img src="../img/logo.png" alt="Ladelvalle Studio">
+        <img src="../img/logo.png" alt="Logo Ladelvalle Studio">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuNav"
+              aria-controls="menuNav"
+              aria-expanded="false"
+              aria-label="Abrir menú de navegación">
         ☰
       </button>
 
       <div class="collapse navbar-collapse justify-content-center" id="menuNav">
         <ul class="navbar-nav gap-lg-4 text-center">
           <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
           <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
@@ -45,9 +54,9 @@
       </div>
 
       <div class="header-extra d-none d-lg-flex align-items-center gap-3">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-behance"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="#" class="btn-header">Trabajemos juntos</a>
       </div>
 
@@ -56,6 +65,8 @@
 </header>
 
 <!-- ================= HERO ================= -->
+<main>
+
 <section class="portfolio-hero">
   <div class="container text-center">
     <h1>Portfolio</h1>
@@ -69,43 +80,44 @@
 <section class="portfolio-grid">
 
   <article class="portfolio-item">
-    <img src="../img/ejemplo09.jpg" alt="Identidad de Marca">
+    <img src="../img/papeleria.png" alt="Proyecto de identidad de marca">
     <h2>Identidad de Marca</h2>
     <p>Branding & dirección visual</p>
   </article>
 
   <article class="portfolio-item">
-    <img src="../img/ejemplo06.jpg" alt="Diseño Editorial">
+    <img src="../img/a5.png" alt="Proyecto de diseño editorial">
     <h2>Diseño Editorial</h2>
     <p>Maquetación & estética</p>
   </article>
 
   <article class="portfolio-item">
-    <img src="../img/socialmedia.JPG" alt="Redes Sociales">
+    <img src="../img/B_06.jpg" alt="Diseño para redes sociales">
     <h2>Redes Sociales</h2>
     <p>Contenido visual</p>
   </article>
 
   <article class="portfolio-item">
-    <img src="../img/web.png" alt="Diseño Web">
+    <img src="../img/web.png" alt="Proyecto de diseño web">
     <h2>Diseño Web</h2>
     <p>UI / UX</p>
   </article>
 
   <article class="portfolio-item">
-    <img src="../img/papeleria.jpg" alt="Rebranding">
+    <img src="../img/frontis_03.png" alt="Proyecto de rebranding">
     <h2>Rebranding</h2>
     <p>Concepto & renovación visual</p>
   </article>
 
   <article class="portfolio-item">
-    <img src="../img/B_09.jpg" alt="Contenido Digital">
+    <img src="../img/stories_02.png" alt="Proyecto de contenido digital">
     <h2>Contenido Digital</h2>
     <p>Diseño para medios digitales</p>
   </article>
 
 </section>
 
+</main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer-main">
@@ -113,9 +125,9 @@
     <p class="mb-3">Seguime en redes</p>
 
     <div class="footer-social">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-behance"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
 
     <p class="mt-4">© 2026 – Ladelvalle Studio</p>

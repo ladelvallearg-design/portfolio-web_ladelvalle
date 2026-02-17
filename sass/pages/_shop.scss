@@ -1,50 +1,35 @@
 @use '../abstracts/variables' as v;
 
-/* -------------------------
-   SHOP: HERO
--------------------------- */
 .shop-hero {
   background-color: v.$rosa-suave;
   text-align: center;
   padding: 6rem 0;
+
+  h1 { font-size: 3rem; margin-bottom: .5rem; }
+  p { font-size: 1.2rem; opacity: .8; }
 }
 
-.shop-hero h1 {
-  font-size: 3rem;
-  margin-bottom: .5rem;
-  color: v.$negro;
-}
+.shop-grid { padding: 5rem 0; }
 
-.shop-hero p {
-  font-size: 1.2rem;
-  opacity: .8;
-}
-
-/* -------------------------
-   SHOP GRID
--------------------------- */
-.shop-grid {
-  padding: 5rem 0;
-}
-
-/* Product card */
 .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: v.$blanco;
   padding: 1.5rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
+  border-radius: 14px;
+  transition: transform .35s ease, box-shadow .35s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 
   img {
     border-radius: 12px;
     margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
   }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 14px rgba(0,0,0,0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
   }
 
   &:hover img {
@@ -52,22 +37,18 @@
   }
 
   h3 {
-    margin-top: .8rem;
-    font-size: 1.25rem;
-    color: v.$negro;
-    margin-bottom: .4rem;
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
   }
 
   p {
     font-size: .95rem;
-    color: v.$negro;
     opacity: .75;
-    margin-bottom: .6rem;
   }
 
   span {
+    margin-top: auto;
     font-weight: 600;
     color: v.$naranja;
-    font-size: 1.1rem;
   }
 }
